@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{5312d023-c4cd-4f41-be53-6384b954dd6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{fe760804-647c-4ad7-b81a-bf137d8b0158}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Socket">
+      <UniqueIdentifier>{5cad738b-6aba-400a-9e88-6421384a92aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Base">
+      <UniqueIdentifier>{f073ee60-89b9-4b38-aed7-5c6594a2b3ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{715cf68e-6779-4784-aa25-b59f12876c44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Buffer">
+      <UniqueIdentifier>{80d2c553-eaf6-4dbe-ae85-b79fb783db32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Manager">
+      <UniqueIdentifier>{1c8a0e96-cf64-4621-99cd-f750e643c21e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Network">
+      <UniqueIdentifier>{8b9c6759-2a17-498a-90cc-15bcddb173e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Interface">
+      <UniqueIdentifier>{bb321b51-4216-437f-b72a-d21f9115b6da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packet">
+      <UniqueIdentifier>{e40f7b1b-a326-463a-ba8c-261c840f42ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\NetworkBase">
+      <UniqueIdentifier>{4b3f75d4-1a0f-4e67-82e4-213c5e06f45e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{b4e403ce-b700-4cb2-8069-215a377cdda1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Factory">
+      <UniqueIdentifier>{b4815ef1-ee5c-4f35-b0f2-bafe0056c0f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Socket">
+      <UniqueIdentifier>{77985fff-a5d3-4c00-8f9c-77ad90d77f03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Boost">
+      <UniqueIdentifier>{4077e7ea-5b29-47cb-a58a-98663e602f4b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Define.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="SehException.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Format.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpConnectorSocket.h">
+      <Filter>Core\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpListenerSocket.h">
+      <Filter>Core\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkObjectBase.h">
+      <Filter>Core\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Synchronization.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="EndPoint.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkStream.h">
+      <Filter>Core\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkEngine.h">
+      <Filter>Core\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Serializer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Iocp.h">
+      <Filter>Core\NetworkBase</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpListener.h">
+      <Filter>Core\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="IoDataBuffer.h">
+      <Filter>Core\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpConnector.h">
+      <Filter>Core\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="EventSelect.h">
+      <Filter>Core\NetworkBase</Filter>
+    </ClInclude>
+    <ClInclude Include="IListener.h">
+      <Filter>Core\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="IAcceptor.h">
+      <Filter>Core\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketHandler.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketManager.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpAcceptorSocket.h">
+      <Filter>Core\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpActiveSocket.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpSocket.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="IConnector.h">
+      <Filter>Core\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="ISender.h">
+      <Filter>Core\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="IoData.h">
+      <Filter>Core\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="DateTime.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="PathManager.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml2.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Xml.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="AcceptorFactory.h">
+      <Filter>Core\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="ConnectorFactory.h">
+      <Filter>Core\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="IPacketFactory.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultPacketType.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultPacketStruct.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\boost\stacktrace\frame.hpp">
+      <Filter>Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\boost\stacktrace\stacktrace.hpp">
+      <Filter>Boost</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="TcpConnectorSocket.cpp">
+      <Filter>Core\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpListenerSocket.cpp">
+      <Filter>Core\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkObjectBase.cpp">
+      <Filter>Core\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="EndPoint.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkStream.cpp">
+      <Filter>Core\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkEngine.cpp">
+      <Filter>Core\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpListener.cpp">
+      <Filter>Core\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Iocp.cpp">
+      <Filter>Core\NetworkBase</Filter>
+    </ClCompile>
+    <ClCompile Include="IoDataBuffer.cpp">
+      <Filter>Core\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpConnector.cpp">
+      <Filter>Core\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="EventSelect.cpp">
+      <Filter>Core\NetworkBase</Filter>
+    </ClCompile>
+    <ClCompile Include="IListener.cpp">
+      <Filter>Core\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="IAcceptor.cpp">
+      <Filter>Core\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Packet.cpp">
+      <Filter>Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpAcceptorSocket.cpp">
+      <Filter>Core\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpActiveSocket.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpSocket.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="IConnector.cpp">
+      <Filter>Core\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="ISender.cpp">
+      <Filter>Core\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="PathManager.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml2.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Xml.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="AcceptorFactory.cpp">
+      <Filter>Core\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="ConnectorFactory.cpp">
+      <Filter>Core\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="IPacketFactory.cpp">
+      <Filter>Packet</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\Config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\CopyHeader.bat" />
+    <None Include="..\..\CopyGenerated.bat" />
+    <None Include="..\..\.gitignore" />
+  </ItemGroup>
+</Project>

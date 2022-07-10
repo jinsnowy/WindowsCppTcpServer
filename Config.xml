@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+<server>
+  <thread_manage iocp_thread_num="4" recv_thread_num="4"/>
+</server>
+  
+<client>
+  <connection time_out="10000"/>
+</client>
+</root>
