@@ -13,8 +13,7 @@
 #include <mswsock.h>
 #include <rpc.h>
 
-
-// #define BOOST_SUPPORT
+#define BOOST_SUPPORT
 #ifdef BOOST_SUPPORT
 #include <boost/stacktrace.hpp>
 
