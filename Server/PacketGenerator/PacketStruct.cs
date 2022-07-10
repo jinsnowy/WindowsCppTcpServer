@@ -14,6 +14,7 @@
 
     public class MyPacket : Packet
     {
+        public bool Bool { get; set; }
         public int Integer { get; set; }
 
         public long Long { get; set; }
@@ -34,6 +35,11 @@
     public class MyList : Packet
     {
         public List<int> Ids { get; set; }
+    }
+
+    public class MyListBool : Packet
+    {
+        public List<bool> Ids { get; set; }
     }
 
     public class MySetString : Packet

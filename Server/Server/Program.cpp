@@ -133,9 +133,6 @@ int main(int argc, char ** argv)
         return 0;
     }
 
-    auto configPath = PathManager::getInstance()->getExecutableDirPath();
-    configPath += "..\\..\\..\\Config.xml";
-
     if (!NetworkEngine::getInstance()->initialize())
         return 0;
 

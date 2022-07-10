@@ -268,5 +268,6 @@
     <None Include="..\..\CopyHeader.bat" />
     <None Include="..\..\CopyGenerated.bat" />
     <None Include="..\..\.gitignore" />
+    <None Include="..\..\README.md" />
   </ItemGroup>
 </Project>

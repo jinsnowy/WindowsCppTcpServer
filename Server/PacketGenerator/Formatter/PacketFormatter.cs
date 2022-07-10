@@ -73,6 +73,12 @@
                 if (!TypeContainer.tryGetBaseTypeStr(Type.GetTypeCode(valueType), out var valueTypeStr))
                     return "unknown";
 
+                if (IsBoolType(valueType))
+                {
+                    valueType = typeof(byte);
+                    valueTypeStr = "unsigned char";
+                }
+
                 var containerStr = "std::vector";
                 types.Add(valueType);
                 var strs = new string[] { $"{containerStr}<{valueTypeStr}>", valueTypeStr };
@@ -86,6 +92,11 @@
         public bool IsStringType(Type t)
         {
             return Type.GetTypeCode(t) == TypeCode.String;
+        }
+
+        public bool IsBoolType(Type t)
+        {
+            return Type.GetTypeCode(t) == TypeCode.Boolean;
         }
 
         public bool IsDictionaryType(Type t) 

@@ -279,6 +279,7 @@ call CopyGenerated.bat .\Generated\Generated*.h include\networkengine</Command>
     <None Include="..\..\.gitignore" />
     <None Include="..\..\CopyGenerated.bat" />
     <None Include="..\..\CopyHeader.bat" />
+    <None Include="..\..\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

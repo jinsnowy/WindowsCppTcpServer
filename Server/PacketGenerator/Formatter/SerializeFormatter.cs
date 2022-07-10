@@ -65,8 +65,8 @@ namespace PacketGenerator.Formatter
                                 if (parseType == ParseType.List)
                                 {
                                     sb.AppendLine($"\t\tint lengthOf{property.Name} = (int){fieldName}.size();")
-                                      .AppendLine(String.Format(format, $"(int){fieldName}.size()", "sizeof(int)"))
-                                      .Append(String.Format(format, $"(unsigned char*){fieldName}.data(), (sizeof({typeStrs[1]}) * lengthOf{property.Name})", $"(sizeof({typeStrs[1]}) * lengthOf{property.Name})"));
+                                    .AppendLine(String.Format(format, $"(int){fieldName}.size()", "sizeof(int)"))
+                                    .Append(String.Format(format, $"(unsigned char*){fieldName}.data(), (sizeof({typeStrs[1]}) * lengthOf{property.Name})", $"(sizeof({typeStrs[1]}) * lengthOf{property.Name})"));
                                 }
                                 else
                                 {
