@@ -70,7 +70,6 @@ int main()
 // include packet definition that generated 
 #include <networkengine\GeneratedPacketFactory.h>
 
-
 int main()
 {
     // 1. initialize network engine
@@ -118,4 +117,67 @@ int main()
 
     return 0;
 }
+```
+
+### Custom PacketHandler
+```cpp
+// include packet definition that generated 
+#include <networkengine\GeneratedPacketFactory.h>
+
+class MyPacketHandler : public PacketHandler<MyPacketHandler>
+{
+    template<typename T>
+    using Ptr = std::shared_ptr<T>;
+private:
+    ISender* mSender;
+    Logger* mLogger;
+
+public:
+    MyPacketHandler(ISender* sender)
+        :
+        mSender(sender),
+        mLogger(Logger::getInstance())
+    {
+        registerHandler(&MyPacketHandler::onEchoMessage);
+        registerHandler(&MyPacketHandler::onMyPacket);
+        registerHandler(&MyPacketHandler::onMyPacketListStr);
+        registerHandler(&MyPacketHandler::onMyPacketSetStr);
+        registerHandler(&MyPacketHandler::onMyPacketMapIntInt);
+        registerHandler(&MyPacketHandler::onMyPacketMapIntString);
+        registerHandler(&MyPacketHandler::onMyPacketMapStringInt);
+        registerHandler(&MyPacketHandler::onMyPacketMapStringString);
+    }
+
+    void onEchoMessage(const Ptr<pkt::EchoMessage>& message)
+    {
+    }
+
+    void onMyPacket(const Ptr<pkt::MyPacket>& message)
+    {
+    }
+
+    void onMyPacketListStr(const Ptr<pkt::MyListString>& message)
+    {
+    }
+
+    void onMyPacketSetStr(const Ptr<pkt::MySetString>& message)
+    {
+    }
+
+    void onMyPacketMapIntInt(const Ptr<pkt::MyMapIntInt>& message)
+    {
+    }
+
+    void onMyPacketMapIntString(const Ptr<pkt::MyMapIntString>& message)
+    {
+    }
+
+    void onMyPacketMapStringInt(const Ptr<pkt::MyMapStringInt>& message)
+    {
+    }
+
+    void onMyPacketMapStringString(const Ptr<pkt::MyMapStringString>& message)
+    {
+    }
+};
 ```
