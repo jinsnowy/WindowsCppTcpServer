@@ -133,9 +133,7 @@ int main(int argc, char ** argv)
         return 0;
     }
 
-    if (!NetworkEngine::getInstance()->initialize())
-        return 0;
-
+    NetworkEngine::getInstance()->initialize();
     PacketManager::getInstance()->registerImpl(new GeneratedPacketFactory());
 
     AcceptorFactory factory(

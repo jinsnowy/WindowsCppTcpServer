@@ -11,11 +11,6 @@
 
 using namespace std;
 
-static void handleMessage(ISender* sender, const std::shared_ptr<pkt::EchoMessage>& message)
-{
-    cout << message->getMessage() << endl;
-}
-
 class MyPacketHandler : public PacketHandler<MyPacketHandler>
 {
 private:
@@ -32,7 +27,7 @@ std::string ipAddress;
 USHORT port = 0;
 std::unique_ptr<TcpConnector> connector;
 
-static bool init()
+static bool connect()
 {
     ConnectorFactory factory([]() {return new TcpConnectorSocket(); },
                      [](ISender* sender) { return new MyPacketHandler(sender); });
@@ -54,7 +49,7 @@ static bool init()
 using namespace chrono_literals;
 using namespace pkt;
 
-static void example()
+static void packets()
 {
     LOG_INFO(logger, "send starts");
     using PacketPtr = std::shared_ptr<Packet>;
@@ -152,14 +147,14 @@ int main(int argc, char** argv)
     NetworkEngine::getInstance()->initialize();
     PacketManager::getInstance()->registerImpl(new GeneratedPacketFactory());
 
-    if (!init())
+    if (!connect())
     {
         return 0;
     }
     
     try
     {
-        example();
+        packets();
     }
     catch (std::exception e)
     {
